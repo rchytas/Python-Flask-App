@@ -1,13 +1,13 @@
-# The project is Python Flask REST API for a Store.
+## The project is Python Flask REST API for a Store.
 
-## Pre-requisites:
+### Pre-requisites:
 	Python 3
 	Flask
 	JWT
 	SQLAlchemy
 	Flask-Restful
 
-## Installation
+### Installation
 	pip install Flask
 
 ### How to use?
