@@ -1,4 +1,4 @@
-Simple Python Flask REST API
+The project is Python Flask REST API for a store.
 
 Pre-requisites:
 		Python 3
