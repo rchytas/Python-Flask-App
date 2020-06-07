@@ -25,3 +25,7 @@
 	GET - /store/<name>
 	POST - /store/<name>
 	DELETE - /store/<name>
+
+### Testing the API 
+#### Use the attached Postman Collection
+	Flask API.postman_collection.json
