@@ -1,16 +1,19 @@
-The project is Python Flask REST API for a store.
+# The project is Python Flask REST API for a store.
 
-Pre-requisites:
+## Pre-requisites and Installation:
 		Python 3
 		Flask
 		JWT
 		SQLAlchemy
 		Flask-Restful
+		'''
+		pip install Flask
+		'''
 
-How to use?
-1. Run using "python app.py"
+# How to use?
+		Run using "python app.py"
 
-2. Has following endpoints
+## Has following endpoints
 
 		GET - /items
 		GET - /items/<name>
