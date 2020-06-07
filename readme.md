@@ -2,7 +2,7 @@
 
 ### Can be used for following applications
 	File System - where objects are files and folders and parents are folders
-	E-commerce store - where objects are itesm and parents are stores / categories
+	E-commerce store - where objects are items and parents are stores / categories
 
 ### Pre-requisites:
 	Python 3
