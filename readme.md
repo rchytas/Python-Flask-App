@@ -14,7 +14,6 @@
 	Run using "python app.py"
 
 ### Has following endpoints
-
 	GET - /items
 	GET - /item/<name>
 	POST - /item/<name>
