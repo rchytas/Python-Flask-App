@@ -16,10 +16,10 @@
 ### Has following endpoints
 
 	GET - /items
-	GET - /items/<name>
-	POST - /items/<name>
-	PUT - /items/<name>
-	DELETE - /items/<name>
+	GET - /item/<name>
+	POST - /item/<name>
+	PUT - /item/<name>
+	DELETE - /item/<name>
 	POST - /auth
 	POST - /register
 	GET - /stores
