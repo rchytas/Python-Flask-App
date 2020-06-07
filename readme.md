@@ -8,7 +8,7 @@ Pre-requisites:
 		Flask-Restful
 
 How to use?
-1. Run using python app.py
+1. Run using "python app.py"
 
 2. Has following endpoints
 
