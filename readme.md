@@ -1,4 +1,4 @@
-## The project is Python Flask REST API for a Store.
+## The project is Python Flask REST API for a Store
 
 ### Pre-requisites:
 	Python 3
