@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "1ccb5130-be4d-4571-8486-fb8b4729b34f",
+		"name": "Python Flask REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test API",
+			"item": [
+				{
+					"name": "/items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/items",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"items"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/item/chair",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"chair"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"store_id\": 1,\n\t\"price\": 69.99\n}"
+						},
+						"url": {
+							"raw": "{{url}}/item/TV",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"TV"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"price\": 0.99,\n\t\"store_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/item/Glasses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"Glasses"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/item/chair",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"chair"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c964fb84-41be-4494-8fdb-58c8b4afd88a",
+								"exec": [
+									"pm.test(\"Access Token was not empty\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.access_token).to.eql(undefined);",
+									"});",
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"jwt_token\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"manish\",\n\t\"password\": \"asdf\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"manish\",\n\t\"password\": \"asdf\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stores",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/store/Store1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"Store1"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/store/Store1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"Store1"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/store/Store1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"Store1"
+							]
+						},
+						"description": "/items"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
