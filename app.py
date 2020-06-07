@@ -4,8 +4,8 @@ from flask_jwt import JWT
 
 from security import authenticate, identity
 from resources.user import UserRegister
-from resources.item import Item, ItemList
-from resources.store import Store, StoreList
+from resources.object import Object, ObjectList
+from resources.parent import Parent, ParentList
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -22,10 +22,10 @@ def create_tables():
 
 jwt = JWT(app, authenticate, identity)  # /auth
 
-api.add_resource(Store, '/store/<string:name>')
-api.add_resource(StoreList, '/stores')
-api.add_resource(Item, '/item/<string:name>')
-api.add_resource(ItemList, '/items')
+api.add_resource(Parent, '/parent/<string:name>')
+api.add_resource(ParentList, '/parents')
+api.add_resource(Object, '/object/<string:name>')
+api.add_resource(ObjectList, '/objects')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__': # doing this as we want to run the app only when someone runs it and not on import of app.py from another module

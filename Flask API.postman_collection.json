@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1ccb5130-be4d-4571-8486-fb8b4729b34f",
+		"_postman_id": "9d02aa10-4547-4a61-86d7-bb0c3ee8bdc7",
 		"name": "Python Flask REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,17 +9,17 @@
 			"name": "Test API",
 			"item": [
 				{
-					"name": "/items",
+					"name": "/objects",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/items",
+							"raw": "{{url}}/objects",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"items"
+								"objects"
 							]
 						},
 						"description": "/items"
@@ -27,23 +27,23 @@
 					"response": []
 				},
 				{
-					"name": "/item/<name>",
+					"name": "/object/<name>",
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "JWT {{jwt_token}}",
-								"type": "text"
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
 							}
 						],
 						"url": {
-							"raw": "{{url}}/item/chair",
+							"raw": "{{url}}/object/chair",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"item",
+								"object",
 								"chair"
 							]
 						},
@@ -52,7 +52,7 @@
 					"response": []
 				},
 				{
-					"name": "/item/<name>",
+					"name": "/object/<name>",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -67,12 +67,12 @@
 							"raw": "{\n\t\"store_id\": 1,\n\t\"price\": 69.99\n}"
 						},
 						"url": {
-							"raw": "{{url}}/item/TV",
+							"raw": "{{url}}/object/TV",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"item",
+								"object",
 								"TV"
 							]
 						},
@@ -81,19 +81,19 @@
 					"response": []
 				},
 				{
-					"name": "/item/<name>",
+					"name": "/object/<name>",
 					"request": {
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "JWT {{jwt_token}}",
-								"type": "text"
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
 							}
 						],
 						"body": {
@@ -101,12 +101,12 @@
 							"raw": "{\n\t\"price\": 0.99,\n\t\"store_id\": 1\n}"
 						},
 						"url": {
-							"raw": "{{url}}/item/Glasses",
+							"raw": "{{url}}/object/Glasses",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"item",
+								"object",
 								"Glasses"
 							]
 						},
@@ -115,24 +115,24 @@
 					"response": []
 				},
 				{
-					"name": "/item/<name>",
+					"name": "/object/<name>",
 					"request": {
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
 								"type": "text",
+								"value": "application/json",
 								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "{{url}}/item/chair",
+							"raw": "{{url}}/object/chair",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"item",
+								"object",
 								"chair"
 							]
 						},
@@ -146,7 +146,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c964fb84-41be-4494-8fdb-58c8b4afd88a",
+								"id": "ca34a3c7-c092-4100-a8ac-bea3b02546bf",
 								"exec": [
 									"pm.test(\"Access Token was not empty\", function () {",
 									"    var jsonData = pm.response.json();",
@@ -214,17 +214,17 @@
 					"response": []
 				},
 				{
-					"name": "/stores",
+					"name": "/parents",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/stores",
+							"raw": "{{url}}/parents",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"stores"
+								"parents"
 							]
 						},
 						"description": "/items"
@@ -232,7 +232,7 @@
 					"response": []
 				},
 				{
-					"name": "/store/<name>",
+					"name": "/parent/<name>",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -243,12 +243,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/store/Store1",
+							"raw": "{{url}}/parent/Store1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"store",
+								"parent",
 								"Store1"
 							]
 						},
@@ -257,7 +257,7 @@
 					"response": []
 				},
 				{
-					"name": "/store/<name>",
+					"name": "/parent/<name>",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -268,12 +268,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/store/Store1",
+							"raw": "{{url}}/parent/Store1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"store",
+								"parent",
 								"Store1"
 							]
 						},
@@ -282,7 +282,7 @@
 					"response": []
 				},
 				{
-					"name": "/store/<name>",
+					"name": "/parent/<name>",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -293,12 +293,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/store/Store1",
+							"raw": "{{url}}/parent/Store1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"store",
+								"parent",
 								"Store1"
 							]
 						},

@@ -1,4 +1,8 @@
-## The project is Python Flask REST API for a Store
+## The project is Python Flask REST API for a Parent Child Relationship
+
+### Can be used for following applications
+	File System - where objects are files and folders and parents are folders
+	E-commerce store - where objects are itesm and parents are stores / categories
 
 ### Pre-requisites:
 	Python 3
@@ -14,17 +18,17 @@
 	Run using "python app.py"
 
 ### Has following endpoints
-	GET - /items
-	GET - /item/<name>
-	POST - /item/<name>
-	PUT - /item/<name>
-	DELETE - /item/<name>
+	GET - /objects
+	GET - /object/<name>
+	POST - /object/<name>
+	PUT - /object/<name>
+	DELETE - /object/<name>
 	POST - /auth
 	POST - /register
-	GET - /stores
-	GET - /store/<name>
-	POST - /store/<name>
-	DELETE - /store/<name>
+	GET - /parents
+	GET - /parent/<name>
+	POST - /parent/<name>
+	DELETE - /parent/<name>
 
 ### Testing the API 
 #### Use the attached Postman Collection
