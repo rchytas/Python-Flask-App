@@ -8,9 +8,7 @@
 	Flask-Restful
 
 ## Installation
-	'''
 	pip install Flask
-	'''
 
 ### How to use?
 	Run using "python app.py"
