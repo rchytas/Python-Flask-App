@@ -64,7 +64,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"store_id\": 1,\n\t\"price\": 69.99\n}"
+							"raw": "{\n\t\"parent_id\": 1,\n\t\"price\": 69.99\n}"
 						},
 						"url": {
 							"raw": "{{url}}/object/TV",
@@ -98,7 +98,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"price\": 0.99,\n\t\"store_id\": 1\n}"
+							"raw": "{\n\t\"price\": 0.99,\n\t\"parent_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{url}}/object/Glasses",
