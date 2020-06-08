@@ -1,8 +1,8 @@
-## The project is Python Flask REST API for a Parent Child Relationship
+## The project is Python Flask REST API for Parent Child Relationship
 
 ### Can be used for following applications
 	File System - where objects are files and folders and parents are folders
-	E-commerce store - where objects are items and parents are stores / categories
+	E-commerce application - where objects are items and parents are stores / categories
 
 ### Pre-requisites:
 	Python 3
