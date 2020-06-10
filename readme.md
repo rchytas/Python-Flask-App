@@ -3,6 +3,7 @@
 ### Can be used for following applications
 	File System - where objects are files, folders and parents are folders
 	E-commerce application - where objects are items and parents are stores / categories
+	Active Directory - where objects are users and parents are groups / roles
 
 ### Pre-requisites:
 	Python 3
